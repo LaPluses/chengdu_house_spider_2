@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>商品住房购买登记</title>
+    <!-- CSS -->
+
+
+
+    <link rel="stylesheet" type="text/css"
+        href="/lottery/jquery-ui-1.13.2/jquery-ui.min.css;jsessionid=462F1985D97DE35F08C724698165F2FC" />
+    <link rel="stylesheet" type="text/css"
+        href="/lottery/accept/css/common.css;jsessionid=462F1985D97DE35F08C724698165F2FC" />
+    <link rel="stylesheet" type="text/css"
+        href="/lottery/accept/css/style.css;jsessionid=462F1985D97DE35F08C724698165F2FC" />
+    <link rel="stylesheet" type="text/css"
+        href="/lottery/upload/webuploader.css;jsessionid=462F1985D97DE35F08C724698165F2FC" />
+    <link rel="shortcut icon" href="#">
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div class="top-logo">
+        <div class="logo">
+            <span class="left">商品住房购房登记</span>
+            <span class="right">
+                <a href="./index" class="">首页</a>
+            </span>
+        </div>
+    </div>
+    <div class="nav nav-nobg">
+        <div class="module-title">
+            <span class="text">项目情况</span>
+        </div>
+        <form method="post" action="./projectList">
+            <input id="pageNo" name="pageNo" type="hidden" />
+            <table cellpadding="0" cellspacing="0" width="100%" class="nav-table input-table">
+                <tr>
+                    <th width="40%">
+                        <select name="regioncode" class="sml">
+                            <option value="00">所有区域</option>
+
+
+
+                            <option value="004">锦江区</option>
+
+
+
+
+                            <option value="005">青羊区</option>
+
+
+
+
+                            <option value="006">金牛区</option>
+
+
+
+
+                            <option value="007">武侯区</option>
+
+
+
+
+                            <option value="008">成华区</option>
+
+
+
+
+                            <option value="009">高新南区</option>
+
+
+
+
+                            <option value="010">高新西区</option>
+
+
+
+
+                            <option value="012">龙泉驿区</option>
+
+
+
+
+                            <option value="013">青白江区</option>
+
+
+
+
+                            <option value="014">新都区</option>
+
+
+
+
+                            <option value="015">温江区</option>
+
+
+
+
+                            <option value="021">金堂县</option>
+
+
+
+
+                            <option value="022">双流区</option>
+
+
+
+
+                            <option value="024">郫都区</option>
+
+
+
+
+                            <option value="029">大邑县</option>
+
+
+
+
+                            <option value="031">蒲江县</option>
+
+
+
+
+                            <option value="032">新津区</option>
+
+
+
+
+                            <option value="042">天府新区</option>
+
+
+
+
+                            <option value="080">简阳市</option>
+
+
+
+
+                            <option value="081">都江堰市</option>
+
+
+
+
+                            <option value="082">彭州市</option>
+
+
+
+
+                            <option value="083">邛崃市</option>
+
+
+
+
+                            <option value="084">崇州市</option>
+
+
+
+
+                            <option value="118">东部新区</option>
+
+
+                        </select>
+                    </th>
+                    <td>
+                        <input class="button-blue" id="sreachProjectList" type="submit" value="查询" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div style="color:red;font-size:16px;padding-bottom: 15px;margin-top: -13px;text-align:left">
+            特别提示：报名登记的项目已截止报名，不能再进行撤销或变更购房登记信息；购房登记人及其家庭成员在所申报项目资格释放前不能申报其他项目。</div>
+
+        <table cellpadding="0" cellspacing="0" width="100%" class="nav-table">
+            <thead>
+                <tr>
+                    <th style="display: none"></th>
+                    <th></th>
+                    <th>区域</th>
+                    <th>项目名称</th>
+                    <th>预售证号</th>
+                    <th>预售范围</th>
+                    <th>住房套数</th>
+                    <th>开发商咨询电话</th>
+                    <th>登记开始时间</th>
+                    <th>登记结束时间</th>
+                    <th>名单外人员资格已释放时间</th>
+                    <th>名单内人员资格已释放时间</th>
+                    <th>预审码取得截止时间</th>
+                    <th>项目报名状态</th>
+                    <th>登记规则</th>
+                </tr>
+            </thead>
+            <tbody id="_projectInfo">
+
+                <tr>
+                    <td class="project_uuid" style="display: none">F79F5A6A3A09D58FE053111119ACEE13</td>
+                    <td><input type="checkbox" /></td>
+                    <td>锦江区</td>
+                    <td class="projectName">静安北苑</td>
+                    <td>510104202367414</td>
+                    <td>6号楼、7号楼、9号楼</td>
+                    <td>192</td>
+                    <td>028-60878888</td>
+                    <td>2023-03-25 09:00:00</td>
+                    <td>2023-03-26 17:00:00</td>
+                    <td class="announceTerminalTime">2023-04-06 00:00:00</td>
+                    <td class="terminalTime">2023-04-09 00:00:00</td>
+                    <td class="qualTerminalTime">2023-03-25 08:59:59</td>
+                    <td>正在报名</td>
+                    <td><span class="view">查看</span></td>
+                </tr>
+
+                <tr>
+                    <td class="project_uuid" style="display: none">F7A012867561A288E053111119ACB8DA</td>
+                    <td></td>
+                    <td>龙泉驿区</td>
+                    <td class="projectName">昆仑御小区</td>
+                    <td>510112202367415</td>
+                    <td>13、18、19栋</td>
+                    <td>140</td>
+                    <td>028-65068888</td>
+                    <td>2023-03-25 09:00:00</td>
+                    <td>2023-03-25 17:00:00</td>
+                    <td class="announceTerminalTime">2023-04-02 00:00:00</td>
+                    <td class="terminalTime">2023-04-03 00:00:00</td>
+                    <td class="qualTerminalTime">2023-03-25 08:59:59</td>
+                    <td>报名结束</td>
+                    <td><span class="view">查看</span></td>
+                </tr>
+
+                <tr>
+                    <td class="project_uuid" style="display: none">F7A187D848766500E053111119AC0EFB</td>
+                    <td></td>
+                    <td>郫都区</td>
+                    <td class="projectName">云玺小区</td>
+                    <td>510117202367419</td>
+                    <td>1栋（二号地块）</td>
+                    <td>60</td>
+                    <td>028-62002255</td>
+                    <td>2023-03-25 09:00:00</td>
+                    <td>2023-03-25 17:00:00</td>
+                    <td class="announceTerminalTime">2023-03-28 00:00:00</td>
+                    <td class="terminalTime">2023-03-30 00:00:00</td>
+                    <td class="qualTerminalTime">2023-03-25 08:59:59</td>
+                    <td>报名结束</td>
+                    <td><span class="view">查看</span></td>
+                </tr>
+
+                <tr>
+                    <td class="project_uuid" style="display: none">F78C79B3FE3FE119E053111119ACA72B</td>
+                    <td></td>
+                    <td>成华区</td>
+                    <td class="projectName">中旅启境花园</td>
+                    <td>510108202367344</td>
+                    <td>20-22、25号楼</td>
+                    <td>200</td>
+                    <td>028-62560088</td>
+                    <td>2023-03-24 09:00:00</td>
+                    <td>2023-03-25 17:00:00</td>
+                    <td class="announceTerminalTime">2023-04-08 00:00:00</td>
+                    <td class="terminalTime">2023-04-10 00:00:00</td>
+                    <td class="qualTerminalTime">2023-03-24 08:59:59</td>
+                    <td>报名结束</td>
+                    <td><span class="view">查看</span></td>
+                </tr>
+
+                <tr>
+                    <td class="project_uuid" style="display: none">F78E1E915B658138E053111119AC047C</td>
+                    <td></td>
+                    <td>温江区</td>
+                    <td class="projectName">星河城</td>
+                    <td>510115202367347</td>
+                    <td>5-9栋（9号地）</td>
+                    <td>214</td>
+                    <td>028-88628888</td>
+                    <td>2023-03-24 09:00:00</td>
+                    <td>2023-03-25 17:00:00</td>
+                    <td class="announceTerminalTime">2023-03-30 23:59:59</td>
+                    <td class="terminalTime">2023-04-02 23:59:59</td>
+                    <td class="qualTerminalTime">2023-03-24 08:59:59</td>
+                    <td>报名结束</td>
+                    <td><span class="view">查看</span></td>
+                </tr>
+
+                <tr>
+                    <td class="project_uuid" style="display: none">F774FBF64D2F0346E053101119AC2F66</td>
+                    <td></td>
+                    <td>温江区</td>
+                    <td class="projectName">江沄阁、江浔阁</td>
+                    <td>510115202367332</td>
+                    <td>江沄阁1-2号楼、江浔阁9号楼</td>
+                    <td>185</td>
+                    <td>028-81291666</td>
+                    <td>2023-03-23 09:00:00</td>
+                    <td>2023-03-24 17:00:00</td>
+                    <td class="announceTerminalTime">2023-03-30 23:59:59</td>
+                    <td class="terminalTime">2023-04-02 23:59:59</td>
+                    <td class="qualTerminalTime">2023-03-23 08:59:59</td>
+                    <td>报名结束</td>
+                    <td><span class="view">查看</span></td>
+                </tr>
+
+                <tr>
+                    <td class="project_uuid" style="display: none">F778935541DF7F14E053111119AC39D3</td>
+                    <td></td>
+                    <td>成华区</td>
+                    <td class="projectName">鹭鸣北湖名邸</td>
+                    <td>510108202367337</td>
+                    <td>14、18号楼</td>
+                    <td>40</td>
+                    <td>028-69097777</td>
+                    <td>2023-03-23 09:00:00</td>
+                    <td>2023-03-23 17:00:00</td>
+                    <td class="announceTerminalTime">2023-04-02 00:00:00</td>
+                    <td class="terminalTime">2023-04-04 00:00:00</td>
+                    <td class="qualTerminalTime">2023-03-23 08:59:59</td>
+                    <td>报名结束</td>
+                    <td><span class="view">查看</span></td>
+                </tr>
+
+                <tr>
+                    <td class="project_uuid" style="display: none">F77A09E4A6F6129CE053101119AC7A3D</td>
+                    <td></td>
+                    <td>彭州市</td>
+                    <td class="projectName">云湖小区</td>
+                    <td>510182202367336</td>
+                    <td>第1、4栋</td>
+                    <td>212</td>
+                    <td>028-68814732</td>
+                    <td>2023-03-23 09:00:00</td>
+                    <td>2023-03-23 17:00:00</td>
+                    <td class="announceTerminalTime">2023-03-29 00:00:00</td>
+                    <td class="terminalTime">2023-03-31 00:00:00</td>
+                    <td class="qualTerminalTime"></td>
+                    <td>报名结束</td>
+                    <td><span class="view">查看</span></td>
+                </tr>
+
+                <tr>
+                    <td class="project_uuid" style="display: none">F763ADEE9739138EE053111119AC882D</td>
+                    <td></td>
+                    <td>金牛区</td>
+                    <td class="projectName">龙湖香港置地瑰云里</td>
+                    <td>510106202367320</td>
+                    <td>地块2：4、5号楼</td>
+                    <td>65</td>
+                    <td>028-85575588</td>
+                    <td>2023-03-22 09:00:00</td>
+                    <td>2023-03-22 17:00:00</td>
+                    <td class="announceTerminalTime">2023-03-25 18:00:00</td>
+                    <td class="terminalTime">2023-03-25 18:00:00</td>
+                    <td class="qualTerminalTime">2023-03-22 08:59:59</td>
+                    <td>报名结束</td>
+                    <td><span class="view">查看</span></td>
+                </tr>
+
+                <tr>
+                    <td class="project_uuid" style="display: none">F766798D308D5200E053101119AC0EC2</td>
+                    <td></td>
+                    <td>新都区</td>
+                    <td class="projectName">大发璞悦珑山小区</td>
+                    <td>510114202367330</td>
+                    <td>10-13号楼、19-22号楼</td>
+                    <td>106</td>
+                    <td>028-8777 9988</td>
+                    <td>2023-03-22 09:00:00</td>
+                    <td>2023-03-23 17:00:00</td>
+                    <td class="announceTerminalTime">2023-04-01 00:00:00</td>
+                    <td class="terminalTime">2023-04-04 00:00:00</td>
+                    <td class="qualTerminalTime">2023-03-22 08:59:59</td>
+                    <td>报名结束</td>
+                    <td><span class="view">查看</span></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+        <div class="pages-box">
+            <a href="#" onclick="goProjectPage(1);">首页</a>
+            <a href="#" onclick="goProjectPage('left');">&lt;</a>
+
+            <a href="#" onclick="goProjectPage(1);" class="on">1</a>
+
+            <a href="#" onclick="goProjectPage(2);">2</a>
+
+            <a href="#" onclick="goProjectPage(3);">3</a>
+
+            <a href="#" onclick="goProjectPage(4);">4</a>
+
+            <a href="#" onclick="goProjectPage(5);">5</a>
+
+            <a href="#" onclick="goProjectPage('right');">&gt;</a>
+            <a href="#" onclick="goProjectPage(292);">尾页</a>
+        </div>
+
+
+        <div style="margin-bottom: 15px;">每日9:00到17:00为购房登记报名时间。</div>
+        <div class="button-box">
+            <form method="post" id="projectListForm" style="display: none" action="./buyInfo">
+                <input id="projectUuid" name="projectUuid" type="hidden">
+                <input id="terminalTime" name="terminalTime" type="hidden">
+                <input id="projectName" name="projectName" type="hidden">
+                <input id="announceTerminalTime" name="announceTerminalTime" type="hidden">
+                <input id="qualTerminalTime" name="qualTerminalTime" type="hidden">
+            </form>
+            <input class="button-blue" id="_bt_next" type="button" value="下一步" />
+        </div>
+    </div>
+    <div class="dialog-box" style="display: none">
+        <div id="dialog-msg" title="特别提示" class="write-content">
+
+        </div>
+
+    </div>
+    <div class="dialog-box" style="display: none">
+        <div id="_dialog-msg" title="提示" class="write-content">
+
+        </div>
+
+    </div>
+    <div class="dialog-box" style="display: none">
+        <div id="dialog-view" title="登记规则详情" class="write-content">
+
+        </div>
+
+    </div>
+</body>
+<!--  Javascripts -->
+
+
+
+<script type="text/javascript" src="/lottery/jquery/jquery.js;jsessionid=462F1985D97DE35F08C724698165F2FC"></script>
+<script type="text/javascript"
+    src="/lottery/jquery-ui-1.13.2/jquery-ui.min.js;jsessionid=462F1985D97DE35F08C724698165F2FC"></script>
+<script type="text/javascript" src="/lottery/js/validate.js;jsessionid=462F1985D97DE35F08C724698165F2FC"></script>
+<script type="text/javascript" src="/lottery/js/jquery-form.js;jsessionid=462F1985D97DE35F08C724698165F2FC"></script>
+<script type="text/javascript" src="/lottery/js/messages_cn.js;jsessionid=462F1985D97DE35F08C724698165F2FC"></script>
+<script type="text/javascript"
+    src="/lottery/upload/webuploader.js;jsessionid=462F1985D97DE35F08C724698165F2FC"></script>
+<script src="https://zw.cdzjryb.com/public_static/copyright.js" charset="utf-8"></script>
+<script>
+
+</script>
+
+<script>
+
+    var restart = false;
+    var currentPageNum = 2;
+    var counter = sessionStorage.getItem("counter");
+    console.log(counter);
+    if (counter >= currentPageNum) {
+
+    } else if (counter == currentPageNum - 1) {
+        counter = parseInt(counter) + 1;
+    } else {
+        restart = true;
+    }
+    if (restart) {
+        window.location.href = './index';
+    } else {
+        sessionStorage.setItem("counter", counter);
+    }
+
+
+
+    $(function () {
+        var tbody = $('#_projectInfo');
+        var checkBoxs = tbody.find("input");
+        for (var i = 0; i < checkBoxs.length; i++) {
+            var checkBox = checkBoxs[i];
+            checkBox.onclick = function () {
+                for (var j = 0; j < checkBoxs.length; j++) {
+                    if (this != checkBoxs[j])
+                        checkBoxs[j].checked = false;
+                }
+                if (this.checked) {
+                    var $tr = $(this).parent().parent();
+                    var projectUuid = $tr.find(".project_uuid").text();
+                    var projectName = $tr.find(".projectName").text();
+                    var terminalTime = $tr.find(".terminalTime").text();
+                    var announceTerminalTime = $tr.find(".announceTerminalTime").text();
+                    var qualTerminalTime = $tr.find(".qualTerminalTime").text();
+                    $('#projectUuid').val(projectUuid);
+                    $('#terminalTime').val(terminalTime);
+                    $('#projectName').val(projectName);
+                    $('#announceTerminalTime').val(announceTerminalTime);
+                    $('#qualTerminalTime').val(qualTerminalTime);
+                } else {
+                    $('#projectUuid').val('');
+                    $('#terminalTime').val('');
+                    $('#projectName').val('');
+                    $('#announceTerminalTime').val('');
+                    $('#qualTerminalTime').val('');
+                }
+
+
+            }
+        }
+        $("#_bt_next").on("click", function () {
+            var projectUuid = $('#projectUuid').val();
+            var terminalTime = $('#terminalTime').val();
+            var projectName = $('#projectName').val();
+            var announceTerminalTime = $('#announceTerminalTime').val();
+            var qualTerminalTime = $('#qualTerminalTime').val();
+            if ("" == projectUuid) {
+                showError("请勾选项目信息！");
+            } else {
+                showTerminalTime(terminalTime, projectName, projectUuid, announceTerminalTime, qualTerminalTime);
+            }
+        });
+        var showError = function (message) {
+            $("#_dialog-msg").children().remove();
+            $("#_dialog-msg").append('<h1>' + message + '</h1>');
+            $("#_dialog-msg").dialog({
+                height: 200,
+                width: 400,
+                modal: true,
+                buttons: {
+                    "关闭": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        };
+
+        var interval = null;
+        var showTerminalTime = function (terminalTime, projectName, projectUuid, announceTerminalTime, qualTerminalTime) {
+            $("#dialog-msg").children().remove();
+            if (!announceTerminalTime) {
+                $("#dialog-msg").append('<h1 style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您正在报名的“' + projectName + '”项目登记成功后，在' + terminalTime + '（不含）之前，申请人及其家庭成员都不能参与其他项目的购房登记。</h1>');
+            } else {
+                $("#dialog-msg").append('<h1 style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您正在报名的“' + projectName + '”项目登记成功后，若您进入了登记购房人名单，则您及您家庭成员在' + terminalTime + '（不含）之前都不能参与本项目其他批次及其他项目的购房登记；若您未进入登记购房人名单，则从' + announceTerminalTime + '日开始，即可参与其他项目的购房登记。</h1>');
+            }
+            if (qualTerminalTime) {
+                $("#dialog-msg").append('<h1 style="text-align: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据本项目购房登记规则，本项目只接受【' + qualTerminalTime + '】前已取得购房资格预审码的购房人登记报名。</h1>');
+            }
+            $("#dialog-msg").dialog({
+                height: 350,
+                width: 550,
+                modal: true,
+                buttons: {
+                    "确定（5）": function () {
+
+                    }
+                },
+                open: function (event, ui) {
+                    var count = 5;
+                    interval = setInterval(function () {
+                        if (count != 0) {
+                            count--;
+                            var obj = {
+                                buttons: {
+                                }
+                            };
+                            var btnName = "确定（" + count + "）";
+                            obj.buttons[btnName] = function () {
+
+                            }
+                            $("#dialog-msg").dialog(obj);
+                        } else {
+                            $("#dialog-msg").dialog("option", "buttons", {
+                                "确定": function () {
+                                    $(this).dialog("close");
+                                    $.ajax({
+                                        type: "post",
+                                        data: {
+                                            projectUuid: projectUuid
+                                        },
+                                        url: './canRegisteProject',
+                                        dataType: "json",
+                                        success: function (data) {
+                                            if (_isSuccess(data)) {
+                                                var result = data.result;
+                                                if (result.projectIsOpen && result.isRegisteTime) {
+                                                    $("#projectListForm").submit();
+                                                }
+                                            } else {
+                                                return showError(data.message);
+                                            }
+                                        },
+                                        error: function (data) {
+                                            showError("请求错误");
+                                        }
+                                    });
+                                }
+                            });
+                            clearInterval(interval);
+                        }
+                    }, 1000);
+                },
+                close: function (event, ui) {
+                    clearInterval(interval);
+                }
+            });
+        };
+
+        $(".view").on("click", function () {
+            var _tr = $(this).parents('tr');
+            var projectUuid = $(_tr).find('.project_uuid').text();
+            $.ajax({
+                type: "post",
+                data: {
+                    projectUuid: projectUuid
+                },
+                url: './getProjectRule',
+                dataType: "json",
+                success: function (data) {
+                    if (_isSuccess(data)) {
+                        showView(data.message);
+                    } else {
+                        showView(data.message);
+                    }
+                },
+                error: function (data) {
+                    showError("请求错误");
+                }
+            });
+
+
+        });
+        function _isSuccess(data) {
+            return (typeof (data.success) == 'boolean' && data.success) || data.success == 'true';
+        }
+        var showView = function (message) {
+            $("#dialog-view").children().remove();
+            $("#dialog-view").text('');
+            $("#dialog-view").append(message);
+            $("#dialog-view").dialog({
+                height: 650,
+                width: 600,
+                modal: true,
+                buttons: {
+                    "关闭": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        };
+
+    });
+    var currentPageNo = parseInt("1");
+    var totalPage = parseInt("292");
+    function goProjectPage(targetPageNo) {
+        var pageNo = targetPageNo;
+        if (targetPageNo == "left") {
+            pageNo = (currentPageNo - 1 < 1) ? 1 : currentPageNo - 1;
+        }
+        if (targetPageNo == "right") {
+            pageNo = (currentPageNo + 1 > totalPage) ? totalPage : currentPageNo + 1;
+        }
+        $("#pageNo").val(pageNo);
+        $("#sreachProjectList").click();
+    }
+</script>
+
+</html>
