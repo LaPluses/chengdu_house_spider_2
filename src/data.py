@@ -14,6 +14,7 @@ class HouseData:
     price: int
     start_time: datetime
     end_time: datetime
+    project_rule: str
 
     class Encoder(json.JSONEncoder):
         def default(self, o: HouseData):
@@ -25,15 +26,21 @@ class HouseData:
                 },
             }
 
+    def parse_project_rule(self, html: str) -> None:
+        soup = BeautifulSoup(html, 'html.parser')
+        self.project_rule = soup.get_text()
+
+    def parse_price(self) -> None:
+        pass
+
     @staticmethod
-    def create(id: str, area: str, name: str, count: int, status: str, price: int, start_time: str, end_time: str) -> HouseData:
+    def create(id: str, area: str, name: str, count: int, status: str, start_time: str, end_time: str) -> HouseData:
         data = HouseData()
         data.id = id
         data.area = area
         data.name = name
         data.count = count
         data.status = status
-        data.price = price
         data.start_time = datetime.strptime(start_time, '%Y-%m-%d %H:%M:%S')
         data.end_time = datetime.strptime(end_time, '%Y-%m-%d %H:%M:%S')
         return data
@@ -58,7 +65,6 @@ class HouseData:
                     status=item[13].get_text(),
                     start_time=item[8].get_text(),
                     end_time=item[9].get_text(),
-                    price=0,
                 )
             )
         return result

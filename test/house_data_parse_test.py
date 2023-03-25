@@ -18,3 +18,9 @@ class TestParse(unittest.TestCase):
             except FileNotFoundError:
                 with open(path.join('test', 'test_all_house_data.json'), 'w') as f:
                     f.write(s)
+
+    def test_parse_projecr_rule(self):
+        with open(path.join('test', 'test_project_rule.json'), 'r') as f:
+            json_object = json.loads(f.read())
+            house_data = HouseData()
+            house_data.parse_project_rule(json_object['message'])

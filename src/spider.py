@@ -16,3 +16,12 @@ async def spide_house_source_page(page: int) -> str:
     async with aiohttp.ClientSession(headers=SPIDER_HEADER) as session:
         async with session.get(url) as response:
             return await response.text()
+
+
+async def spide_house_project_rule(id: str) -> str:
+    url = f'{SPIDER_DOMAIN}/lottery/accept/getProjectRule'
+    async with aiohttp.ClientSession(headers=SPIDER_HEADER) as session:
+        async with session.post(url, data={
+            'projectUuid': id
+        }) as response:
+            return await response.text()
